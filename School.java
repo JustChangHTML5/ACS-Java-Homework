@@ -28,7 +28,14 @@ public class School {
       System.out.println("student: " + " " + eric.getId() + " " + eric.getFirstname() + " " + eric.getLastname() + " " + eric.getGender() + " " + eric.getGrade() + " " + eric.getGpa());
         
       System.out.println("Student info: " + eric.toString());   
-   }
+      
+      Course math = new Course(1, "Math", 3, 200.0f, 1);
+      Course english = new Course(2, "English", 2, 150.0f, 2);
+      Course physics = new Course(3, "Physics", 3, 300.0f, 3);
+      System.out.println(math.toString());
+      System.out.println(english.toString());
+      System.out.println(physics.toString());
+  }
 
 
 }
