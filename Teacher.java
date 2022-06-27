@@ -1,3 +1,4 @@
+package model;
 
 import java.time.LocalDate;
 
@@ -28,6 +29,11 @@ public class Teacher {
       this.gender = gender;
       this.position = position;
       this.salary = salary;
+   }
+   
+   @Override
+   public String toString() {
+      return this.getClass().getSimpleName() + this.id + ", " + this.firstname + ", " + this.lastname + ", " + this.gender + ", " + this.position + ", " + this.salary;
    }
    
    public int getId() {

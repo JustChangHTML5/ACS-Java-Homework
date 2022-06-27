@@ -1,3 +1,5 @@
+package model;
+
 public class Course {
    private int id;
    private String name;
@@ -17,8 +19,9 @@ public class Course {
       this.instructor = instructor;
    }
    
+   @Override
    public String toString() {
-      return this.id + ", " + this.name + ", " + this.credit + ", " + this.fee + ", " + this.instructor;
+      return this.getClass().getSimpleName() + this.id + ", " + this.name + ", " + this.credit + ", " + this.fee + ", " + this.instructor;
    }
    
    public int getId() {

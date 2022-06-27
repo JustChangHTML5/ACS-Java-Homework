@@ -1,3 +1,4 @@
+package model;
 
 import java.time.LocalDate;
 
@@ -30,8 +31,9 @@ public class Student {
       this.gpa = gpa;
    }
    
+   @Override
    public String toString() {
-      return this.id + ", " + this.firstname + ", " + this.lastname + ", " + this.gender + ", " + this.grade + ", " + this.gpa;
+      return this.getClass().getSimpleName() + this.id + ", " + this.firstname + ", " + this.lastname + ", " + this.gender + ", " + this.grade + ", " + this.gpa;
    }
    
    public int getId() {
