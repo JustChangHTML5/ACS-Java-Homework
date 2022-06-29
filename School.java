@@ -32,37 +32,29 @@ public class School {
       int size = args.length;
       System.out.println("args: " + size);
       
-      if (size >= 7) {
-         System.out.println("6 args");
+      if (args.length >= 7) {
          String type = args[0];
          String idStr = args[1];
          String firstname = args[2];
          String lastname = args[3];
          String genderStr = args[4];
-         String arg4 = args[5];
-         String arg5 = args[6];
-         
+      
          int id = Integer.parseInt(idStr);
-         char genderChar = genderStr.charAt(0);
-         
+         char gender =  genderStr.charAt(0);
+      
          Object obj = null;
-         if (type.equals("Student")) {
-         
-            int grade = Integer.parseInt(arg4);
-            float gpa = Float.parseFloat(arg5);
-            obj = new Student(id, firstname, lastname, genderChar, grade, gpa);
-            
-         } else if (type.equals("Teacher")) {
-            
-            String position = arg4;
-            float salary = Float.parseFloat(arg5);
-            obj = new Teacher(id, firstname, lastname, genderChar, position, salary);
-         
+         if ("Student".equals(type)) {
+            int grade = Integer.parseInt(args[5]);
+            float gpa = Float.parseFloat(args[6]);
+            obj = new Student(id, firstname, lastname, gender, grade, gpa);
+         } else if ("Teacher".equals(type)) {
+            String position = args[5];
+            float salary = Float.parseFloat(args[6]);
+            obj = new Teacher(id, firstname, lastname, gender, position, salary);
          }
-         
-         System.out.println(obj.toString());
-      } else {
-         System.out.println("No args");
+         if (obj != null) {
+            System.out.println(obj.toString());
+         }
       }
       
       Student kristie = new Student(1, "Kristie", "Lan", 'F', 8, 4.0f);
