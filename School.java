@@ -46,18 +46,18 @@ public class School {
          if ("Student".equals(type)) {
             int grade = Integer.parseInt(args[5]);
             float gpa = Float.parseFloat(args[6]);
-            obj = new Student(id, firstname, lastname, gender, grade, gpa);
+            //obj = new Student(id, firstname, lastname, gender, address, phone, grade, gpa);
          } else if ("Teacher".equals(type)) {
             String position = args[5];
             float salary = Float.parseFloat(args[6]);
-            obj = new Teacher(id, firstname, lastname, gender, position, salary);
+            //obj = new Teacher(id, firstname, lastname, gender, position, salary);
          }
          if (obj != null) {
             System.out.println(obj.toString());
          }
       }
       
-      Student kristie = new Student(1, "Kristie", "Lan", 'F', 8, 4.0f);
+      Student kristie = new Student(1, "Kristie", "Lan", 'F', "1122", "1122", 8, 4.0f);
       System.out.println("student: " + " " + kristie.getId() + " " + kristie.getFirstname() + " " + kristie.getLastname() + " " + kristie.getGender() + " " + kristie.getGrade() + " " + kristie.getGpa());
       
       Teacher charlie1 = new Teacher(101, "Charlie", "Gao", 'M', "Professer", 10.0f);

@@ -2,54 +2,25 @@ package model;
 
 import java.time.LocalDate;
 
-public class Student {
-   private int id;
-   private String firstname;
-   private String lastname;
-   private LocalDate birth;
-   private char gender;
-   private String address;
-   private String city;
-   private String state;
-   private String zip;
-   private String phone;
+public class Student extends Person {
    private String email;
    private int grade;
    private float gpa;
    private int advisor;
    
    public Student() {
-   
+      super();
    }
    
-   public Student(int id, String firstname, String lastname, char gender, int grade, float gpa) {
-      this.id = id;
-      this.firstname = firstname;
-      this.lastname = lastname;
-      this.gender = gender;
+   public Student(int id, String firstname, String lastname, char gender, String address, String phone, int grade, float gpa) {
+      super(id, firstname, lastname, gender, address, phone);
       this.grade = grade;
       this.gpa = gpa;
    }
    
    @Override
    public String toString() {
-      return this.getClass().getSimpleName() + this.id + ", " + this.firstname + ", " + this.lastname + ", " + this.gender + ", " + this.grade + ", " + this.gpa;
-   }
-   
-   public int getId() {
-      return this.id;
-   }
-   
-   public String getFirstname() {
-      return this.firstname;
-   }
-   
-   public String getLastname() {
-      return this.lastname;
-   }
-   
-   public char getGender() {
-      return this.gender;
+      return this.getClass().getSimpleName() + super.toString() +  this.grade + ", " + this.gpa;
    }
    
    public int getGrade() {
@@ -58,22 +29,6 @@ public class Student {
    
    public float getGpa() {
       return this.gpa;
-   }
-   
-   public void setId(int id) {
-      this.id = id;
-   }
-   
-   public void setFirstname(String firstname) {
-      this.firstname = firstname;
-   }
-   
-   public void setLastname(String lastname) {
-      this.lastname = lastname;
-   }
-   
-   public void setGender(char gender) {
-      this.gender = gender;
    }
    
    public void setGrade(int grade) {
