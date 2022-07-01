@@ -13,23 +13,25 @@ public abstract class Person {
    private String state;
    private String zip;
    private String phone;
+   private String email;
    
    public Person() {
    
    }
    
-   public Person(int id, String firstname, String lastname, char gender, String address, String phone) {
+   public Person(int id, String firstname, String lastname, char gender, String address, String phone, String email) {
       this.id = id;
       this.firstname = firstname;
       this.lastname = lastname;
       this.gender = gender;
       this.address = address;
       this.phone = phone;
+      this.email = email;
    }
    
    @Override
    public String toString() {
-      return this.id + ", " + this.firstname + ", " + this.lastname + ", " + this.gender + ", " + this.address + ", " + this.phone;
+      return this.getClass().getSimpleName() + this.id + ", " + this.firstname + ", " + this.lastname + ", " + this.gender + ", " + this.address + ", " + this.phone + ", " + this.email;
    }
    
    public int getId() {
@@ -56,6 +58,10 @@ public abstract class Person {
       return this.phone;
    }
    
+   public String getEmail() {
+      return this.email;
+   }
+   
    public void setId(int id) {
       this.id = id;
    }
@@ -78,6 +84,10 @@ public abstract class Person {
    
    public void setPhone(String phone) {
       this.phone = phone;
+   }
+   
+   public void setEmail(String email) {
+      this.email = email;
    }
 
 }

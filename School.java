@@ -57,10 +57,10 @@ public class School {
          }
       }
       
-      Student kristie = new Student(1, "Kristie", "Lan", 'F', "1122", "1122", 8, 4.0f);
+      Student kristie = new Student(1, "Kristie", "Lan", 'F', "1122", "1122", "1122", 8, 4.0f);
       System.out.println("student: " + " " + kristie.getId() + " " + kristie.getFirstname() + " " + kristie.getLastname() + " " + kristie.getGender() + " " + kristie.getGrade() + " " + kristie.getGpa());
       
-      Teacher charlie1 = new Teacher(101, "Charlie", "Gao", 'M', "Professer", 10.0f);
+      Teacher charlie1 = new Teacher(101, "Charlie", "Gao", 'M', "1122", "1122", "1122", "Professer", 10.0f);
       System.out.println(charlie1.getId() + " " + charlie1.getFirstname() + " " + charlie1.getLastname() + " " + charlie1.getGender() + " " + charlie1.getPosition() + " " + charlie1.getSalary());
       
       Teacher charlie = new Teacher();

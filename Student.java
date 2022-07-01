@@ -12,15 +12,15 @@ public class Student extends Person {
       super();
    }
    
-   public Student(int id, String firstname, String lastname, char gender, String address, String phone, int grade, float gpa) {
-      super(id, firstname, lastname, gender, address, phone);
+   public Student(int id, String firstname, String lastname, char gender, String address, String phone, String email, int grade, float gpa) {
+      super(id, firstname, lastname, gender, address, phone, email);
       this.grade = grade;
       this.gpa = gpa;
    }
    
    @Override
    public String toString() {
-      return this.getClass().getSimpleName() + super.toString() +  this.grade + ", " + this.gpa;
+      return super.toString() + ", " + this.grade + ", " + this.gpa;
    }
    
    public int getGrade() {
