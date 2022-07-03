@@ -32,12 +32,15 @@ public class School {
       int size = args.length;
       System.out.println("args: " + size);
       
-      if (args.length >= 7) {
+      if (args.length >= 10) {
          String type = args[0];
          String idStr = args[1];
          String firstname = args[2];
          String lastname = args[3];
          String genderStr = args[4];
+         String address = args[7];
+         String phone = args[8];
+         String email = args[9];
       
          int id = Integer.parseInt(idStr);
          char gender =  genderStr.charAt(0);
@@ -46,11 +49,11 @@ public class School {
          if ("Student".equals(type)) {
             int grade = Integer.parseInt(args[5]);
             float gpa = Float.parseFloat(args[6]);
-            //obj = new Student(id, firstname, lastname, gender, address, phone, grade, gpa);
+            obj = new Student(id, firstname, lastname, gender, address, phone, email, grade, gpa);
          } else if ("Teacher".equals(type)) {
             String position = args[5];
             float salary = Float.parseFloat(args[6]);
-            //obj = new Teacher(id, firstname, lastname, gender, position, salary);
+            obj = new Teacher(id, firstname, lastname, gender, address, phone, email, position, salary);
          }
          if (obj != null) {
             System.out.println(obj.toString());

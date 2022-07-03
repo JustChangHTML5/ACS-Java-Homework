@@ -3,7 +3,8 @@ package model;
 public class Course {
    private int id;
    private String name;
-   private int credit;
+   private String semester;
+   private float credit;
    private float fee;
    private int instructor;
    
@@ -11,9 +12,10 @@ public class Course {
    
    }
    
-   public Course(int id, String name, int credit, float fee, int instructor) {
+   public Course(int id, String name, String semester, float credit, float fee, int instructor) {
       this.id = id;
       this.name = name;
+      this.semester = semester;
       this.credit = credit;
       this.fee = fee;
       this.instructor = instructor;
@@ -21,7 +23,7 @@ public class Course {
    
    @Override
    public String toString() {
-      return this.getClass().getSimpleName() + this.id + ", " + this.name + ", " + this.credit + ", " + this.fee + ", " + this.instructor;
+      return this.getClass().getSimpleName() + this.id + ", " + this.name + ", " + this.semester + ", " + this.credit + ", " + this.fee + ", " + this.instructor;
    }
    
    public int getId() {
@@ -32,7 +34,11 @@ public class Course {
       return this.name;
    }
    
-   public int getCredit() {
+   public String getSemester() {
+      return this.semester;
+   }
+   
+   public float getCredit() {
       return this.credit;
    }
    
@@ -52,7 +58,11 @@ public class Course {
       this.name = name;
    }
    
-   public void setCredit(int credit) {
+   public void setSemester(String semester) {
+      this.semester = semester;
+   }
+   
+   public void setCredit(float credit) {
       this.credit = credit;
    }
    
